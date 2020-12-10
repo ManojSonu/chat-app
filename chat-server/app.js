@@ -1,12 +1,16 @@
 var createError = require('http-errors');
 var express = require('express');
 
+const cors = require('cors');
+
 var usersRouter = require('./routes/users');
 const roomsRouter = require('./routes/rooms');
 
 var app = express();
 
 require('./database/config/mongooseConnection');
+
+app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
