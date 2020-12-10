@@ -11,7 +11,6 @@ router.post('/', function(req, res) {
       res.status(500);
       return res.end();
     }
-
     res.json(dbResponse._id)
   })
 
