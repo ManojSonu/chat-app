@@ -6,7 +6,8 @@ const roomMessages = new Schema({
     userId: String,
     userName: String,
     roomId: String,
-    message: String
+    message: String,
+    timeStamp: Number
 });
 
 const RoomMessagesModel = mongoose.model('roomMessages',roomMessages);
