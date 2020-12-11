@@ -1,0 +1,1 @@
+This is Live Chat application implemented using MEAN Stack.
