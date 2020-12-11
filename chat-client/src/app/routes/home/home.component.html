@@ -1,1 +1,22 @@
-<p>home works!</p>
+<section class="home">
+    <div style="text-align: center;">
+        <form (submit)="onSubmit()" class="w-25" style="margin: auto">
+
+            <div class="form-group">
+                <label for="room">Select Room</label>
+                <select [(ngModel)]="formData.room" id="room" name="room" class="form-control">
+                    <option *ngFor="let room of rooms" [ngValue]="room">{{ room.name }}</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="username">Your name</label>
+                <input type="text" [(ngModel)]="formData.userName" id="username" name="username" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Join Chat</button>
+            </div>
+        </form>
+    </div>
+</section>

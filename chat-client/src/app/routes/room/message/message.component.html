@@ -1,0 +1,11 @@
+<div [ngClass]="{ 'text-left': !ownMessage, 'text-right': ownMessage }">
+    <div class="message border border-info rounded-pill w-50 px-4 py-2 mb-2" [ngClass]="{ 'ml-auto': ownMessage }">
+        <div class="small text-left text-info border-bottom">
+            {{ message.timeStamp | date }} &nbsp;&nbsp;&nbsp; {{ message.userName }}
+        </div>
+        <div class="text-left">
+            {{ message.message }}
+        </div>
+    
+    </div>
+</div>
